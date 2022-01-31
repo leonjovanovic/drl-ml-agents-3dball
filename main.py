@@ -2,6 +2,8 @@ from mlagents_envs.base_env import ActionTuple
 from mlagents_envs.environment import UnityEnvironment
 import numpy as np
 import torch
+
+import Config
 from Agent import Agent
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -24,22 +26,11 @@ print(behavior_name)
 # CREATE ADDITIONAL CLASSES
 agent = Agent(state_size, action_size, num_steps)
 
-'''
-print(k.obs[0][0])
-print(k.reward)
-print(k.agent_id)
-print(k.group_id)
-print(k.group_reward)
-'''
 # ULAZIMO U PETLJU
-while True:
-    # COLLECT STATE
-    states = decision_steps.obs[0]
-    old_decisions = decision_steps
+for n_step in range(Config.total_steps):
     # NALAZIMO I SETUJEMO AKCIJU
-    # REPLACE WITH NN
     #actions = np.random.rand(decision_steps.reward.shape[0], action_size)*2-1
-    actions = agent.get_actions(decision_steps)
+    actions = agent.get_actions(decision_steps, n_step)
     # UBACI STARI OBS I STARU AKCIJU
     env.set_actions("3DBall?team=0", action=actions)
     # DO A STEP WITH GIVEN ACTIONS
@@ -54,7 +45,7 @@ while True:
     # UPDATE AGENT
     agent.update()
 
-    #break # IZBRISATI NA KRAJU
+    agent.record_data()
 
 env.close()
 

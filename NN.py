@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 
+
 class PolicyNN(nn.Module):
     def __init__(self, input_shape, output_shape):
         super(PolicyNN, self).__init__()
@@ -16,6 +17,7 @@ class PolicyNN(nn.Module):
     def forward(self, states):
         return self.model(states)
 
+
 class CriticNN(nn.Module):
     def __init__(self, input_shape):
         super(CriticNN, self).__init__()
@@ -29,4 +31,4 @@ class CriticNN(nn.Module):
         )
 
     def forward(self, states, actions):
-        return self.model(torch.cat(states, actions))
+        return self.model(torch.cat((states, actions), 1))

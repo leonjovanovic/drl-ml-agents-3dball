@@ -1,5 +1,5 @@
 import torch
-
+import numpy as np
 import Config
 
 
@@ -25,9 +25,6 @@ class Buffer:
             cnt += 1
 
     def add(self, decision_steps, terminal_steps):
-        # ADD TO BUFFER
-        # MI SMO OVDE NAPRAVILI KORAK I TREBA DA NADJEMO STARI STATE ZA TAJ AGENT ID
-        # DA BI NOVI STATE, REWARD, ACTION DODALI U BUFFER
         for obs, a_id in zip(decision_steps.obs[0], decision_steps.agent_id):
             if decision_steps.reward[a_id] == 0:
                 continue
@@ -38,7 +35,6 @@ class Buffer:
             self.rewards[self.buffer_index] = 0.1
             self.dones[self.buffer_index] = 0
 
-        cnt = 0
         for obs, a_id in zip(terminal_steps.obs[0], terminal_steps.agent_id):
             self.buffer_index = (self.buffer_index + 1) % self.buffer_size
             self.states[self.buffer_index] = self.old_state[a_id]
@@ -46,7 +42,11 @@ class Buffer:
             self.new_states[self.buffer_index] = torch.from_numpy(obs)
             self.rewards[self.buffer_index] = -1
             self.dones[self.buffer_index] = 1
-            cnt += 1
-        print(self.buffer_index + 1)
+
+    def sample_indices(self, batch_size):
+        indices = np.arange(min(self.buffer_size, self.buffer_index))
+        np.random.shuffle(indices)
+        indices = indices[:batch_size]
+        return indices
 
 
