@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfa270-a4df-4b54-9a82-ca68bc1b2d37" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgentControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentControl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -60,6 +60,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -71,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643616072568</updated>
-      <workItem from="1643616075232" duration="23153000" />
+      <workItem from="1643616075232" duration="25950000" />
+      <workItem from="1643701875475" duration="22929000" />
     </task>
     <servers />
   </component>
@@ -88,5 +90,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

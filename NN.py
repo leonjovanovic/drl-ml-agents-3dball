@@ -26,9 +26,10 @@ class CriticNN(nn.Module):
             nn.ReLU(),
             nn.Linear(256, 256),
             nn.ReLU(),
-            nn.Linear(256, 1),
-            nn.ReLU()
+            nn.Linear(256, 1)
         )
 
     def forward(self, states, actions):
+        if torch.mean(self.model(torch.cat((states, actions), 1))) == 0:
+            print(torch.cat((states, actions), 1))
         return self.model(torch.cat((states, actions), 1))

@@ -25,7 +25,7 @@ class AgentControl:
 
     def get_actions(self, states, n_step):
         if n_step < Config.start_steps:
-            return torch.rand(1, 2) * 2 - 1
+            return torch.rand(states.shape[0], 2) * 2 - 1
         else:
             actions = self.moving_policy_nn(torch.Tensor(states).to(self.device))
             noise = (self.noise_std ** 0.5) * torch.randn(self.action_shape).to(self.device)
