@@ -1,9 +1,6 @@
-import numpy as np
 import torch
-
 import Config
 from NN import PolicyNN, CriticNN
-
 
 class AgentControl:
     def __init__(self, state_shape, action_shape):

@@ -5,7 +5,6 @@ import Config
 import NN
 import torch
 
-
 class TestAgent:
     def __init__(self, env, behavior_name, state_shape, action_shape, num_steps):
         self.env = env
@@ -17,7 +16,7 @@ class TestAgent:
         self.reward_agents = [0] * num_steps
         self.n_episode = 0
 
-    def test(self, nn):
+    def test(self, nn, writer, n_step):
         self.test_reset(nn, self.num_steps)
         steps_tuple = list(self.env.get_steps(self.behavior_name))
         decision_steps = steps_tuple[0]
@@ -42,6 +41,7 @@ class TestAgent:
         print(self.return_queue)
         mean_return = np.mean(self.return_queue)
         self.env.reset()
+        self.print_tensorboard(writer, mean_return, n_step)
         return self.check_goal(mean_return)
 
     def test_reset(self, nn, num_steps):
@@ -70,6 +70,9 @@ class TestAgent:
         else:
             print("GOAL REACHED! Mean reward over 100 episodes is " + str(np.round(mean_return, 2)))
             # If we reached goal, save the model locally
-            torch.save(self.policy_nn.state_dict(), 'models/3dBall' + Config.date_time + '.onnx')
-            # self.record_final_episode()
+            torch.save(self.policy_nn.state_dict(), 'models/3dBall' + Config.date_time + '.pt')
             return True
+
+    def print_tensorboard(self, writer, mean_return, n_step):
+        if writer is not None:
+            writer.add_scalar('test100rew', mean_return, n_step)

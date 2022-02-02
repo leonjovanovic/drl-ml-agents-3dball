@@ -1,16 +1,19 @@
 import itertools
-
+from tensorboardX import SummaryWriter
 import Config
 from Buffer import Buffer
 from AgentControl import AgentControl
 from mlagents_envs.base_env import ActionTuple
 from collections import deque
 import numpy as np
+from TestAgent import TestAgent
 
 class Agent:
-    def __init__(self, state_shape, action_shape, num_steps):
+    def __init__(self, env, behavior_name, state_shape, action_shape, num_steps):
         self.agent_control = AgentControl(state_shape, action_shape)
         self.buffer = Buffer(state_shape, action_shape, num_steps)
+        self.writer = SummaryWriter(logdir='content/runs/' + Config.writer_name) if Config.write else None
+        self.test_agent = TestAgent(env, behavior_name, state_shape, action_shape, num_steps)
         self.num_steps = num_steps
         self.policy_loss_mean = deque(maxlen=100)
         self.critic_loss_mean = deque(maxlen=100)
@@ -72,6 +75,13 @@ class Agent:
             np.round(self.max_reward, 2)) + " Mean 100 reward: " + str(
             np.round(np.mean(self.return_queue), 2)) + " Last rewards: " + str(
             np.round(self.current_ep_rewards, 2)))
+
+        if Config.write and self.buffer.buffer_index > Config.min_buffer_size:
+            self.writer.add_scalar('pg_loss', np.mean(self.policy_loss_mean), n_step)
+            self.writer.add_scalar('vl_loss', np.mean(self.critic_loss_mean), n_step)
+            self.writer.add_scalar('100rew', np.mean(self.return_queue), n_step)
+            if len(self.current_ep_rewards) > 0:
+                self.writer.add_scalar('rew', np.mean(self.current_ep_rewards), n_step)
         self.current_ep_rewards = []
 
     def check_goal(self, n_step):
@@ -82,10 +92,10 @@ class Agent:
             return True
         return False
 
-    def test(self, test_agent):
+    def test(self, n_step):
         self.reward_agents = [0] * self.num_steps
         self.can_test_again = False
-        return test_agent.test(self.agent_control.moving_policy_nn)
+        return self.test_agent.test(self.agent_control.moving_policy_nn, self.writer, n_step)
 
 
 

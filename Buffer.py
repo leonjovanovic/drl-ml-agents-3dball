@@ -2,7 +2,6 @@ import torch
 import numpy as np
 import Config
 
-
 class Buffer:
     def __init__(self, state_shape, action_shape, total_steps):
         self.buffer_size = Config.buffer_size
