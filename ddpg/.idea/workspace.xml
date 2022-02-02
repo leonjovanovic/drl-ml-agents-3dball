@@ -2,18 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfa270-a4df-4b54-9a82-ca68bc1b2d37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Load.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/runs/3dBall_100000_64_3000_0.99_03_04_08_2.10.2.30/events.out.tfevents.1643792557.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/3dBall1.18.25.19.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgentControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentControl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/3dBall1.18.25.19.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/models/3dBall1.18.25.19.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/ppo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/Agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/AgentControl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/Buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/Config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/NN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppo/TestAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/drl-ml-agents-3dball.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgentControl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Buffer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Load.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestAgent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../content/runs/3dBall_100000_64_3000_0.99_03_04_08_2.10.2.30/events.out.tfevents.1643792557.DESKTOP-3P8CLT4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/3dBall1.18.25.19.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/3dBall1.18.25.19.pt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +50,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="24SFR4W7liR6aXSSp0C3hANbvr5" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -43,14 +65,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drl-ddpg-lunar-lander" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="Load" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="drl-ml-agents-3dball" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -70,6 +95,9 @@
       <module name="drl-ml-agents-3dball" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -106,6 +134,9 @@
       <workItem from="1643616075232" duration="25950000" />
       <workItem from="1643701875475" duration="23550000" />
       <workItem from="1643787759232" duration="7092000" />
+      <workItem from="1643797660322" duration="136000" />
+      <workItem from="1643799288218" duration="6000" />
+      <workItem from="1643807658487" duration="5140000" />
     </task>
     <servers />
   </component>
