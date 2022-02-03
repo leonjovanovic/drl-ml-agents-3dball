@@ -10,11 +10,11 @@ from TestAgent import TestAgent
 
 
 class Agent:
-    def __init__(self, num_agents, state_shape, action_shape):
+    def __init__(self, env, behavior_name, num_agents, state_shape, action_shape, episode_length):
         self.agent_control = AgentControl(state_shape, action_shape)
-        self.buffer = Buffer(num_agents, state_shape, action_shape)
-        self.test_agent = TestAgent()
-        self.writer = SummaryWriter() if Config.write else None
+        self.buffer = Buffer(num_agents, state_shape, action_shape, episode_length)
+        self.test_agent = TestAgent(env, behavior_name, num_agents, state_shape, action_shape)
+        self.writer = SummaryWriter(logdir="/content/runs/" + Config.writer_name) if Config.write else None
         self.policy_loss_mean = deque(maxlen=100)
         self.critic_loss_mean = deque(maxlen=100)
         self.return_queue = deque(maxlen=100)
@@ -44,7 +44,8 @@ class Agent:
             self.reward_agents[a_id] = 0
             cnt += 1
 
-    def get_steps(self, env, behavior_name):
+    @staticmethod
+    def get_steps(env, behavior_name):
         steps = list(env.get_steps(behavior_name))
         return steps[0], steps[1]
 
@@ -99,4 +100,6 @@ class Agent:
     def test(self, n_step):
         self.reward_agents = [0] * self.num_agents
         self.can_test_again = False
-        return self.test_agent.test(self.agent_control.get_policy_nn(), self.writer, n_step)
+        end = self.test_agent.test(self.agent_control.get_policy_nn(), self.writer, n_step)
+        self.buffer.reset(full=False)
+        return end

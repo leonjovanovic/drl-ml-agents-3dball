@@ -1,4 +1,6 @@
-episode_length = 110
+import datetime
+
+test_episodes = 100
 total_steps = 1000
 update_steps = 10
 batch_size = 2048
@@ -15,4 +17,12 @@ adam_eps = 1e-8
 
 gamma = 0.99
 
-write = False
+write = True
+
+now = datetime.datetime.now()
+date_time = "{}.{}.{}.{}".format(now.day, now.hour, now.minute, now.second)
+
+writer_name = 'PPO_3dBall' + '_' + str(seed) + "_" + str(total_steps) + "_" + str(batch_size) + "_" + \
+              str(minibatch_size) + "_" + str(update_steps) + "_" + "gae" + "_" + str(gamma) + "_" + \
+              str(policy_lr)[-2:] + "_" + str(critic_lr)[-2:] + "_" + \
+              str(adam_eps)[-2:] + "_" + date_time

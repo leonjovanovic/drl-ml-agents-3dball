@@ -2,6 +2,7 @@ import torch
 import Config
 from NN import PolicyNN, CriticNN
 
+
 class AgentControl:
     def __init__(self, state_shape, action_shape):
         self.action_shape = action_shape
@@ -71,4 +72,3 @@ class AgentControl:
             for mov, targ in zip(self.moving_policy_nn.parameters(), self.target_policy_nn.parameters()):
                 targ.data.mul_(Config.polyak)
                 targ.data.add_((1 - Config.polyak) * mov.data)
-

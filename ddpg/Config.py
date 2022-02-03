@@ -16,7 +16,6 @@ adam_eps = 1e-8
 gamma = 0.99
 polyak = 0.995
 
-
 now = datetime.datetime.now()
 date_time = "{}.{}.{}.{}".format(now.day, now.hour, now.minute, now.second)
 

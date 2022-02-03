@@ -3,10 +3,10 @@ import Config
 
 
 class Buffer:
-    def __init__(self, num_workers, state_shape, action_shape):
+    def __init__(self, num_workers, state_shape, action_shape, episode_length):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.buffer_index = 0
-
+        self.episode_length = episode_length
         self.states = torch.zeros(Config.batch_size, state_shape).to(self.device)
         self.actions = torch.zeros(Config.batch_size, action_shape).to(self.device)
         self.logprob = torch.zeros(Config.batch_size, action_shape).to(self.device)
@@ -14,13 +14,13 @@ class Buffer:
         self.new_states = torch.zeros(Config.batch_size, state_shape).to(self.device)
         self.dones = torch.zeros(Config.batch_size).to(self.device)
 
-        self.states_episode = torch.zeros(num_workers, Config.episode_length, state_shape).to(self.device)
-        self.actions_episode = torch.zeros(num_workers, Config.episode_length, action_shape).to(self.device)
-        self.logprob_episode = torch.zeros(num_workers, Config.episode_length, action_shape).to(self.device)
-        self.rewards_episode = torch.zeros(num_workers, Config.episode_length).to(self.device)
-        self.new_states_episode = torch.zeros(num_workers, Config.episode_length, state_shape).to(self.device)
-        self.dones_episode = torch.zeros(num_workers, Config.episode_length).to(self.device)
-        self.episode_step = torch.zeros(num_workers).to(self.device)
+        self.states_episode = torch.zeros(num_workers, self.episode_length, state_shape).to(self.device)
+        self.actions_episode = torch.zeros(num_workers, self.episode_length, action_shape).to(self.device)
+        self.logprob_episode = torch.zeros(num_workers, self.episode_length, action_shape).to(self.device)
+        self.rewards_episode = torch.zeros(num_workers, self.episode_length).to(self.device)
+        self.new_states_episode = torch.zeros(num_workers, self.episode_length, state_shape).to(self.device)
+        self.dones_episode = torch.zeros(num_workers, self.episode_length).to(self.device)
+        self.episode_step = torch.zeros(num_workers, dtype=torch.long).to(self.device)
 
         self.gt = torch.zeros(Config.batch_size + 1).to(self.device)
         self.advantages = torch.zeros(Config.batch_size + 1).to(self.device)
@@ -28,9 +28,10 @@ class Buffer:
 
     def add_old(self, decision_steps, actions, logprob):
         cnt = 0
+        actionsTensor = torch.Tensor(actions).to(self.device)
         for obs, a_id in zip(decision_steps.obs[0], decision_steps.agent_id):
             self.states_episode[a_id, self.episode_step[a_id]] = torch.from_numpy(obs)
-            self.actions_episode[a_id, self.episode_step[a_id]] = actions[cnt]
+            self.actions_episode[a_id, self.episode_step[a_id]] = actionsTensor[cnt]
             self.logprob_episode[a_id, self.episode_step[a_id]] = logprob[cnt]
             cnt += 1
 
@@ -79,3 +80,8 @@ class Buffer:
             self.advantages[i] = delta + Config.gae_lambda * Config.gamma * self.advantages[i+1] * (1 - self.dones[i])
             # For critic
             self.gt[i] = self.rewards[i] + Config.gamma * self.gt[i+1] * (1 - self.dones[i])
+
+    def reset(self, full=False):
+        if full:
+            self.buffer_index = 0
+        self.episode_step[self.episode_step != 0] = 0

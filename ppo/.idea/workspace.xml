@@ -2,60 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4b3472-9205-4a56-91dd-448907ce3c6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/drl-ml-agents-3dball.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/Agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/AgentControl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/Buffer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/Config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/Load.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/NN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/TestAgent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/content/runs/3dBall_100000_64_3000_0.99_03_04_08_2.10.2.30/events.out.tfevents.1643792557.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/models/3dBall1.18.25.19.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ddpg/models/3dBall1.18.25.19.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ppo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AgentControl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/drl-ml-agents-3dball.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AgentControl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Buffer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Load.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TestAgent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../content/runs/3dBall_100000_64_3000_0.99_03_04_08_2.10.2.30/events.out.tfevents.1643792557.DESKTOP-3P8CLT4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../models/3dBall1.18.25.19.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../models/3dBall1.18.25.19.pt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/TestAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="24YBmQZ4N0IrtUgmEP7dfqkFTxk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -81,6 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -113,6 +83,9 @@
       <list>
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -126,6 +99,9 @@
       <updated>1643797797479</updated>
       <workItem from="1643797798712" duration="8000" />
       <workItem from="1643798723369" duration="15436000" />
+      <workItem from="1643874890146" duration="263000" />
+      <workItem from="1643875165553" duration="121000" />
+      <workItem from="1643875376023" duration="11098000" />
     </task>
     <servers />
   </component>
@@ -142,5 +118,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

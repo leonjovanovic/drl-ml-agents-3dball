@@ -28,7 +28,6 @@ while True:
     decision_steps = steps[0]
     terminal_steps = steps[1]
 
-
-#input_names = ["actual_input_1"] + ["learned_%d" % i for i in range(6)]
-#output_names = ["output1"]
-#torch.onnx.export(policy_nn, torch.Tensor(decision_steps.obs[0]).to(device),MODEL_NAME+".onnx", input_names=input_names, output_names=output_names, verbose=True)
+# input_names = ["actual_input_1"] + ["learned_%d" % i for i in range(6)]
+# output_names = ["output1"]
+# torch.onnx.export(policy_nn, torch.Tensor(decision_steps.obs[0]).to(device),MODEL_NAME+".onnx", input_names=input_names, output_names=output_names, verbose=True)

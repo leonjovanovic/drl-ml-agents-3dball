@@ -17,13 +17,13 @@ decision_steps = steps[0]
 terminal_steps = steps[1]
 num_agents = len(decision_steps.reward)
 
-agent = Agent(num_agents, state_shape, action_shape)
+agent = Agent(env, behavior_name, num_agents, state_shape, action_shape, 1001)
 
 for n_step in range(Config.total_steps):
 
-    #if agent.check_test(n_step):
-    #    agent.test(n_step)
-    #    decision_steps, _ = agent.get_steps(env, behavior_name)
+    if agent.check_test(n_step):
+        agent.test(n_step)
+        decision_steps, _ = agent.get_steps(env, behavior_name)
 
     agent.update_lr(n_step)
 
@@ -51,7 +51,4 @@ for n_step in range(Config.total_steps):
 env.close()
 agent.writer.close()
 
-
-
-
-
+# tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ppo\content\runs" --host=127.0.0.1

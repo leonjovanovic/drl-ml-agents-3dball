@@ -8,6 +8,7 @@ from collections import deque
 import numpy as np
 from TestAgent import TestAgent
 
+
 class Agent:
     def __init__(self, env, behavior_name, state_shape, action_shape, num_steps):
         self.agent_control = AgentControl(state_shape, action_shape)
@@ -38,7 +39,9 @@ class Agent:
         # Sample random CONFIG BATCH SIZE minibatch
         indices = self.buffer.sample_indices(Config.batch_size)
         # Update Critic Moving NN using that minibatch
-        critic_loss = self.agent_control.update_critic(self.buffer.states[indices], self.buffer.actions[indices], self.buffer.rewards[indices], self.buffer.new_states[indices], self.buffer.dones[indices])
+        critic_loss = self.agent_control.update_critic(self.buffer.states[indices], self.buffer.actions[indices],
+                                                       self.buffer.rewards[indices], self.buffer.new_states[indices],
+                                                       self.buffer.dones[indices])
         # Update Policy Moving NN using that minibatch
         policy_loss = self.agent_control.update_policy(self.buffer.states[indices])
         # Update Critic & Policy Target NN using Polyak averaging
@@ -65,7 +68,7 @@ class Agent:
             cnt += 1
 
     def record_data(self, n_step):
-        if n_step % 100 != 0: # or self.buffer.buffer_index < Config.min_buffer_size:
+        if n_step % 100 != 0:  # or self.buffer.buffer_index < Config.min_buffer_size:
             return
         if len(self.current_ep_rewards) > 0:
             self.max_reward = np.maximum(self.max_reward, np.max(self.current_ep_rewards))
@@ -96,6 +99,3 @@ class Agent:
         self.reward_agents = [0] * self.num_steps
         self.can_test_again = False
         return self.test_agent.test(self.agent_control.moving_policy_nn, self.writer, n_step)
-
-
-

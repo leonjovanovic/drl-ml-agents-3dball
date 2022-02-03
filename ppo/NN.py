@@ -5,6 +5,7 @@ import Config
 
 torch.manual_seed(Config.seed)
 
+
 class PolicyNN(nn.Module):
     def __init__(self, input_shape, output_shape):
         super(PolicyNN, self).__init__()
@@ -26,6 +27,7 @@ class PolicyNN(nn.Module):
         if actions is None:
             actions = normal_ds.sample()
         return actions, normal_ds.log_prob(actions)
+
 
 class CriticNN(nn.Module):
     def __init__(self, input_shape):

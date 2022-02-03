@@ -24,24 +24,21 @@ class TestAgent:
         self.n_episode = 0
         # Create new enviroment and test it for 100 episodes using the model we trained
         print("Testing...")
-        print("[", end="")
         while self.n_episode < 100:
             # Get the action from Policy NN given the state
             actions = self.policy_nn(torch.Tensor(decision_steps.obs[0]).to(self.device)).detach().cpu().numpy()
             actionsTuple = ActionTuple(continuous=actions)
             self.env.set_actions(self.behavior_name, actionsTuple)
             self.env.step()
-
             steps_tuple = list(self.env.get_steps(self.behavior_name))
             decision_steps = steps_tuple[0]
             terminal_steps = steps_tuple[1]
             self.calculate_ep_reward(decision_steps, terminal_steps)
-        print(self.n_episode)
-        print("]")
         print(self.return_queue)
         mean_return = np.mean(self.return_queue)
         self.env.reset()
-        self.print_tensorboard(writer, mean_return, n_step)
+        if writer is not None:
+            writer.add_scalar('test100rew', mean_return, n_step)
         return self.check_goal(mean_return)
 
     def test_reset(self, nn, num_steps):
@@ -60,7 +57,6 @@ class TestAgent:
             self.return_queue.append(self.reward_agents[a_id])
             self.reward_agents[a_id] = 0
             self.n_episode += 1
-            print(".", end="")
             cnt += 1
 
     def check_goal(self, mean_return):
@@ -72,7 +68,3 @@ class TestAgent:
             # If we reached goal, save the model locally
             torch.save(self.policy_nn.state_dict(), 'models/3dBall' + Config.date_time + '.pt')
             return True
-
-    def print_tensorboard(self, writer, mean_return, n_step):
-        if writer is not None:
-            writer.add_scalar('test100rew', mean_return, n_step)
