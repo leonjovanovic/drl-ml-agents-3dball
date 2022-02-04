@@ -51,6 +51,7 @@ class AgentControl:
 
         self.critic_optim.zero_grad()
         critic_loss.backward()
+        torch.nn.utils.clip_grad_norm_(self.critic_nn.parameters(), Config.max_grad_norm)
         self.critic_optim.step()
 
         return critic_loss.detach().cpu().numpy()

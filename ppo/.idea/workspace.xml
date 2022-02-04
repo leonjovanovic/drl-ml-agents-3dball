@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4b3472-9205-4a56-91dd-448907ce3c6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/PPO_3dBall_2_300_2048_32_5_gae_0.99_03_04_05_4.13.52.23/events.out.tfevents.1643979148.DESKTOP-3P8CLT4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ddpg/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ddpg/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ddpg/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/TestAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ddpg/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentControl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,8 @@
       <workItem from="1643798723369" duration="15436000" />
       <workItem from="1643874890146" duration="263000" />
       <workItem from="1643875165553" duration="121000" />
-      <workItem from="1643875376023" duration="11098000" />
+      <workItem from="1643875376023" duration="20894000" />
+      <workItem from="1643959299192" duration="13696000" />
     </task>
     <servers />
   </component>

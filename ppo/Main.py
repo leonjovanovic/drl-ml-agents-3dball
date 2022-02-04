@@ -5,50 +5,57 @@ from mlagents_envs.environment import UnityEnvironment
 import Config
 from Agent import Agent
 
-env = UnityEnvironment(file_name=None, seed=1, side_channels=[])
-env.reset()
-behavior_name = next(iter(env.behavior_specs.keys()))
-behavior_specs = next(iter(env.behavior_specs.values()))
-state_shape = behavior_specs[0][0].shape[0]
-action_shape = behavior_specs[1].continuous_size
+import time
 
-steps = list(env.get_steps(behavior_name))
-decision_steps = steps[0]
-terminal_steps = steps[1]
-num_agents = len(decision_steps.reward)
+for i in range(10):
+    Config.seed = i
+    env = UnityEnvironment(file_name=None, seed=1, side_channels=[])
+    env.reset()
+    behavior_name = next(iter(env.behavior_specs.keys()))
+    behavior_specs = next(iter(env.behavior_specs.values()))
+    state_shape = behavior_specs[0][0].shape[0]
+    action_shape = behavior_specs[1].continuous_size
 
-agent = Agent(env, behavior_name, num_agents, state_shape, action_shape, 1001)
+    steps = list(env.get_steps(behavior_name))
+    decision_steps = steps[0]
+    terminal_steps = steps[1]
+    num_agents = len(decision_steps.reward)
 
-for n_step in range(Config.total_steps):
+    agent = Agent(env, behavior_name, num_agents, state_shape, action_shape, 1001)
 
-    if agent.check_test(n_step):
-        agent.test(n_step)
-        decision_steps, _ = agent.get_steps(env, behavior_name)
+    for n_step in range(Config.total_steps):
 
-    agent.update_lr(n_step)
+        if agent.check_test(n_step):
+            agent.test(n_step)
+            decision_steps, _ = agent.get_steps(env, behavior_name)
 
-    while not agent.buffer_full():
-        agent.calculate_ep_reward(decision_steps, terminal_steps)
+        agent.update_lr(n_step)
 
-        actions = agent.get_actions(decision_steps)
-        env.set_actions(behavior_name, ActionTuple(continuous=actions))
-        env.step()
+        start = time.time()# --------------------------------------------------------
+        while not agent.buffer_full():
+            agent.calculate_ep_reward(decision_steps, terminal_steps)
 
-        decision_steps, terminal_steps = agent.get_steps(env, behavior_name)
+            actions = agent.get_actions(decision_steps)
+            env.set_actions(behavior_name, ActionTuple(continuous=actions))
+            env.step()
 
-        agent.add_to_buffer(decision_steps, terminal_steps)
+            decision_steps, terminal_steps = agent.get_steps(env, behavior_name)
 
-    agent.calculate_advantage()
+            agent.add_to_buffer(decision_steps, terminal_steps)
 
-    batch_indices = np.arange(Config.batch_size)
-    for _ in range(Config.update_steps):
-        np.random.shuffle(batch_indices)
-        for mb in range(0, Config.batch_size, Config.minibatch_size):
-            agent.update(batch_indices[mb: mb + Config.minibatch_size])
+        end = time.time()# --------------------------------------------------------
+        print(end - start)
+        agent.calculate_advantage()
 
-    agent.record_data(n_step)
+        batch_indices = np.arange(Config.batch_size)
+        for _ in range(Config.update_steps):
+            np.random.shuffle(batch_indices)
+            for mb in range(0, Config.batch_size, Config.minibatch_size):
+                agent.update(batch_indices[mb: mb + Config.minibatch_size])
 
-env.close()
-agent.writer.close()
+        agent.record_data(n_step)
+
+    env.close()
+    agent.writer.close()
 
 # tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ppo\content\runs" --host=127.0.0.1

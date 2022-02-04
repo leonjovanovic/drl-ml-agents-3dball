@@ -14,7 +14,7 @@ class Agent:
         self.agent_control = AgentControl(state_shape, action_shape)
         self.buffer = Buffer(num_agents, state_shape, action_shape, episode_length)
         self.test_agent = TestAgent(env, behavior_name, num_agents, state_shape, action_shape)
-        self.writer = SummaryWriter(logdir="/content/runs/" + Config.writer_name) if Config.write else None
+        self.writer = SummaryWriter(logdir="content/runs/" + Config.writer_name) if Config.write else None
         self.policy_loss_mean = deque(maxlen=100)
         self.critic_loss_mean = deque(maxlen=100)
         self.return_queue = deque(maxlen=100)
@@ -22,7 +22,6 @@ class Agent:
         self.max_reward = -10
         self.num_agents = num_agents
         self.reward_agents = [0] * self.num_agents
-        self.can_test_again = False
 
     def get_actions(self, decision_steps):
         # Agent control ce prebaciti u tensor i vratiti detachovani action u numpiju i logprob
@@ -93,13 +92,12 @@ class Agent:
 
     def check_test(self, n_step):
         if (n_step + 1) % 50 == 0 or (len(self.return_queue) >= 100 and np.mean(
-                list(itertools.islice(self.return_queue, 75, 100))) >= 100 and self.can_test_again):
+                list(itertools.islice(self.return_queue, 90, 100))) >= 100):
             return True
         return False
 
     def test(self, n_step):
         self.reward_agents = [0] * self.num_agents
-        self.can_test_again = False
         end = self.test_agent.test(self.agent_control.get_policy_nn(), self.writer, n_step)
         self.buffer.reset(full=False)
         return end
