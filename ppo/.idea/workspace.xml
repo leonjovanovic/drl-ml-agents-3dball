@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4b3472-9205-4a56-91dd-448907ce3c6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/runs/PPO_3dBall_2_300_2048_32_5_gae_0.99_03_04_05_4.13.52.23/events.out.tfevents.1643979148.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_250_2048_32_5_gae_0.99_03_04_05_5.16.31.35/events.out.tfevents.1644075101.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_4.16.58.2/events.out.tfevents.1643990287.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_5.2.51.52/events.out.tfevents.1644025922.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_5.9.47.5/events.out.tfevents.1644050841.DESKTOP-3P8CLT4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/runs/PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_4.16.54.38/events.out.tfevents.1643990086.DESKTOP-3P8CLT4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgentControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentControl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runs/Feb03_12-19-26_DESKTOP-3P8CLT4/events.out.tfevents.1643887166.DESKTOP-3P8CLT4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ddpg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -97,6 +99,8 @@
       <workItem from="1643875165553" duration="121000" />
       <workItem from="1643875376023" duration="20894000" />
       <workItem from="1643959299192" duration="13696000" />
+      <workItem from="1643986599999" duration="288000" />
+      <workItem from="1643989413188" duration="10376000" />
     </task>
     <servers />
   </component>

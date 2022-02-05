@@ -5,11 +5,12 @@ from mlagents_envs.environment import UnityEnvironment
 import Config
 from Agent import Agent
 
-import time
-
+env = UnityEnvironment(
+    file_name='D:/Users/Leon Jovanovic/Documents/Computer Science/Unity Projects/ml-agents/Project/Build/UnityEnvironment.exe', seed=1,
+    side_channels=[], no_graphics=True)
 for i in range(10):
     Config.seed = i
-    env = UnityEnvironment(file_name=None, seed=1, side_channels=[])
+    print("RESETING " + str(Config.seed))
     env.reset()
     behavior_name = next(iter(env.behavior_specs.keys()))
     behavior_specs = next(iter(env.behavior_specs.values()))
@@ -27,11 +28,10 @@ for i in range(10):
 
         if agent.check_test(n_step):
             agent.test(n_step)
-            decision_steps, _ = agent.get_steps(env, behavior_name)
+            decision_steps, terminal_steps = agent.get_steps(env, behavior_name)
 
         agent.update_lr(n_step)
 
-        start = time.time()# --------------------------------------------------------
         while not agent.buffer_full():
             agent.calculate_ep_reward(decision_steps, terminal_steps)
 
@@ -43,8 +43,6 @@ for i in range(10):
 
             agent.add_to_buffer(decision_steps, terminal_steps)
 
-        end = time.time()# --------------------------------------------------------
-        print(end - start)
         agent.calculate_advantage()
 
         batch_indices = np.arange(Config.batch_size)
@@ -55,7 +53,7 @@ for i in range(10):
 
         agent.record_data(n_step)
 
-    env.close()
     agent.writer.close()
+env.close()
 
 # tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ppo\content\runs" --host=127.0.0.1

@@ -1,15 +1,15 @@
 import datetime
 
 test_episodes = 100
-total_steps = 350
+total_steps = 250
 update_steps = 5
 batch_size = 2048
 minibatch_size = 32
 
 gae = True
-gae_lambda = 0.9
+gae_lambda = 0.85
 
-seed = 3
+seed = 1
 policy_lr = 0.0003
 critic_lr = 0.0004
 max_grad_norm = 0.5
@@ -17,7 +17,7 @@ adam_eps = 1e-5
 
 gamma = 0.99
 
-write = False
+write = True
 
 now = datetime.datetime.now()
 date_time = "{}.{}.{}.{}".format(now.day, now.hour, now.minute, now.second)

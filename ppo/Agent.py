@@ -14,7 +14,7 @@ class Agent:
         self.agent_control = AgentControl(state_shape, action_shape)
         self.buffer = Buffer(num_agents, state_shape, action_shape, episode_length)
         self.test_agent = TestAgent(env, behavior_name, num_agents, state_shape, action_shape)
-        self.writer = SummaryWriter(logdir="content/runs/" + Config.writer_name) if Config.write else None
+        self.writer = SummaryWriter(logdir="content/runs/" + str(Config.seed) + Config.writer_name) if Config.write else None
         self.policy_loss_mean = deque(maxlen=100)
         self.critic_loss_mean = deque(maxlen=100)
         self.return_queue = deque(maxlen=100)
