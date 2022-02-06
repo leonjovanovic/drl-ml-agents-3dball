@@ -5,12 +5,12 @@ from mlagents_envs.environment import UnityEnvironment
 import Config
 from Agent import Agent
 
-env = UnityEnvironment(
-    file_name='D:/Users/Leon Jovanovic/Documents/Computer Science/Unity Projects/ml-agents/Project/Build/UnityEnvironment.exe', seed=1,
-    side_channels=[], no_graphics=True)
 for i in range(10):
     Config.seed = i
     print("RESETING " + str(Config.seed))
+    env = UnityEnvironment(
+        file_name='D:/Users/Leon Jovanovic/Documents/Computer Science/Unity Projects/ml-agents/Project/Build/UnityEnvironment.exe', seed=1,
+        side_channels=[], no_graphics=True)
     env.reset()
     behavior_name = next(iter(env.behavior_specs.keys()))
     behavior_specs = next(iter(env.behavior_specs.values()))
@@ -27,7 +27,8 @@ for i in range(10):
     for n_step in range(Config.total_steps):
 
         if agent.check_test(n_step):
-            agent.test(n_step)
+            if agent.test(n_step):
+                break
             decision_steps, terminal_steps = agent.get_steps(env, behavior_name)
 
         agent.update_lr(n_step)
@@ -54,6 +55,6 @@ for i in range(10):
         agent.record_data(n_step)
 
     agent.writer.close()
-env.close()
+    env.close()
 
 # tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ppo\content\runs" --host=127.0.0.1

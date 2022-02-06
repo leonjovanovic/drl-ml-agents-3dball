@@ -1,7 +1,7 @@
 import datetime
 
 test_episodes = 100
-total_steps = 250
+total_steps = 350
 update_steps = 5
 batch_size = 2048
 minibatch_size = 32
