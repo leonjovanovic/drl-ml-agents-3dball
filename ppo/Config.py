@@ -9,7 +9,7 @@ minibatch_size = 32
 gae = True
 gae_lambda = 0.85
 
-seed = 1
+seed = 0
 policy_lr = 0.0003
 critic_lr = 0.0004
 max_grad_norm = 0.5

@@ -1,5 +1,4 @@
 from collections import deque
-
 import numpy as np
 import torch
 from mlagents_envs.base_env import ActionTuple
@@ -64,5 +63,6 @@ class TestAgent:
         else:
             print("GOAL REACHED! Mean reward over 100 episodes is " + str(np.round(mean_return, 2)))
             # If we reached goal, save the model locally
-            torch.save(self.policy_nn.state_dict(), 'models/3dBall_' + str(Config.seed) + "_" + Config.date_time + '.pt')
+            torch.save(self.policy_nn.state_dict(),
+                       'models/3dBall_' + str(Config.seed) + "_" + Config.date_time + '.pt')
             return True

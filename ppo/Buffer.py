@@ -3,17 +3,21 @@ import Config
 
 
 class Buffer:
+    # Since the enviroment we use has multiple agents that work in parallel and PPO requires to store whole episodes in
+    # buffer so the advantage can be calculated, each agent will have separate episode buffer in which will store each
+    # step of only its episode. When episode for certain agent ends, whole episode buffer is inserted to the main buffer
     def __init__(self, num_workers, state_shape, action_shape, episode_length):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.buffer_index = 0
         self.episode_length = episode_length
+        #------------------------------------------------- MAIN BUFFER -------------------------------------------------
         self.states = torch.zeros(Config.batch_size, state_shape).to(self.device)
         self.actions = torch.zeros(Config.batch_size, action_shape).to(self.device)
         self.logprob = torch.zeros(Config.batch_size, action_shape).to(self.device)
         self.rewards = torch.zeros(Config.batch_size).to(self.device)
         self.new_states = torch.zeros(Config.batch_size, state_shape).to(self.device)
         self.dones = torch.zeros(Config.batch_size).to(self.device)
-
+        #----------------------------------------------- EPISODE BUFFER ------------------------------------------------
         self.states_episode = torch.zeros(num_workers, self.episode_length, state_shape).to(self.device)
         self.actions_episode = torch.zeros(num_workers, self.episode_length, action_shape).to(self.device)
         self.logprob_episode = torch.zeros(num_workers, self.episode_length, action_shape).to(self.device)

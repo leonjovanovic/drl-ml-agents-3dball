@@ -19,7 +19,7 @@ nn = NN.PolicyNN(state_shape, action_shape).to(device)
 nn.load_state_dict(torch.load(path))
 
 steps = list(env.get_steps(behavior_name))
-decision_steps, terminal_steps = steps[0], steps[1]
+decision_steps, _ = steps[0], steps[1]
 
 while True:
     actions, _ = nn(torch.Tensor(decision_steps.obs[0]).to(device))
@@ -28,5 +28,3 @@ while True:
     env.step()
     steps = list(env.get_steps(behavior_name))
     decision_steps = steps[0]
-    terminal_steps = steps[1]
-
