@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfa270-a4df-4b54-9a82-ca68bc1b2d37" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ppo/Load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ppo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ppo/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ppo/content/runs/1PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644166284.DESKTOP-3P8CLT4" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/content/runs/1PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644166284.DESKTOP-3P8CLT4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +114,9 @@
       <workItem from="1643887962223" duration="482000" />
       <workItem from="1643979127789" duration="604000" />
       <workItem from="1643986891967" duration="108000" />
+      <workItem from="1644219996071" duration="475000" />
+      <workItem from="1644221000845" duration="18000" />
+      <workItem from="1644221049187" duration="8000" />
     </task>
     <servers />
   </component>

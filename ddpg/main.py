@@ -49,4 +49,4 @@ for n_step in range(Config.total_steps):
 env.close()
 agent.writer.close()
 
-#tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ddpg\content\runs" --host=127.0.0.1
+#tensorboard --logdir="PATH_TO_FOLDER\ddpg\content\runs" --host=127.0.0.1

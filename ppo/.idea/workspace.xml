@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4b3472-9205-4a56-91dd-448907ce3c6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_5.20.16.40/events.out.tfevents.1644088602.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644136787.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/runs/1PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644166284.DESKTOP-3P8CLT4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/3dBall_0_5.20.16.40.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/3dBall_0_6.9.39.42.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_250_2048_32_5_gae_0.99_03_04_05_5.16.32.3/events.out.tfevents.1644075125.DESKTOP-3P8CLT4" beforeDir="false" afterPath="$PROJECT_DIR$/content/runs/0PPO_3dBall_1_250_2048_32_5_gae_0.99_03_04_05_5.16.32.3/events.out.tfevents.1644075125.DESKTOP-3P8CLT4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/runs/1PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644166284.DESKTOP-3P8CLT4" beforeDir="false" afterPath="$PROJECT_DIR$/content/runs/1PPO_3dBall_1_350_2048_32_5_gae_0.99_03_04_05_6.9.39.42/events.out.tfevents.1644166284.DESKTOP-3P8CLT4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +46,36 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ddpg" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Load">
+    <configuration name="Load" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ppo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Load.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ppo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -75,7 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Load" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.Main" />
@@ -98,7 +116,8 @@
       <workItem from="1643875376023" duration="20894000" />
       <workItem from="1643959299192" duration="13696000" />
       <workItem from="1643986599999" duration="288000" />
-      <workItem from="1643989413188" duration="18458000" />
+      <workItem from="1643989413188" duration="19060000" />
+      <workItem from="1644219791905" duration="1237000" />
     </task>
     <servers />
   </component>

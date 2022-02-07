@@ -9,7 +9,7 @@ for i in range(10):
     Config.seed = i
     print("RESETING " + str(Config.seed))
     env = UnityEnvironment(
-        file_name='D:/Users/Leon Jovanovic/Documents/Computer Science/Unity Projects/ml-agents/Project/Build/UnityEnvironment.exe', seed=1,
+        file_name='PATH_TO_FOLDER/UnityEnvironment.exe', seed=1,
         side_channels=[], no_graphics=True)
     env.reset()
     behavior_name = next(iter(env.behavior_specs.keys()))
@@ -57,4 +57,4 @@ for i in range(10):
     agent.writer.close()
     env.close()
 
-# tensorboard --logdir="D:\Users\Leon Jovanovic\Documents\Computer Science\Reinforcement Learning\drl-ml-agents-3dball\ppo\content\runs" --host=127.0.0.1
+# tensorboard --logdir="PATH_TO_FOLDER\ppo\content\runs" --host=127.0.0.1
