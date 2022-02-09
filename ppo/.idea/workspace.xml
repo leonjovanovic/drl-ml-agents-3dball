@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac4b3472-9205-4a56-91dd-448907ce3c6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ddpg/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ddpg/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load.py" beforeDir="false" afterPath="$PROJECT_DIR$/Load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestAgent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../drl-trpo-ppo-bipedal-walker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.Load">
@@ -58,6 +51,9 @@
       <module name="ppo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -122,6 +118,8 @@
       <workItem from="1643986599999" duration="288000" />
       <workItem from="1643989413188" duration="19060000" />
       <workItem from="1644219791905" duration="4612000" />
+      <workItem from="1644247155680" duration="53000" />
+      <workItem from="1644247537902" duration="4000" />
     </task>
     <servers />
   </component>

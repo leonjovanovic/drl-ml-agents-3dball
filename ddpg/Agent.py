@@ -34,7 +34,7 @@ class Agent:
         self.buffer.add(decision_steps, terminal_steps)
 
     def update(self):
-        if self.buffer.buffer_index < Config.min_buffer_size:
+        if self.buffer.buffer_index < Config.min_buffer_size and not self.buffer.initialized:
             return
         # Sample random CONFIG BATCH SIZE minibatch
         indices = self.buffer.sample_indices(Config.batch_size)

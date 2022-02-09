@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcfa270-a4df-4b54-9a82-ca68bc1b2d37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ppo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/Buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Buffer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/Load.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ppo/TestAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ppo/TestAgent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../drl-ddpg-lunar-lander" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python.main">
@@ -70,9 +65,6 @@
       <module name="drl-ml-agents-3dball" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -91,9 +83,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.Load" />
-        <item itemvalue="Python.Load" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.Load" />
+        <item itemvalue="Python.Load" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -120,6 +112,10 @@
       <workItem from="1644219996071" duration="475000" />
       <workItem from="1644221000845" duration="18000" />
       <workItem from="1644221049187" duration="1446000" />
+      <workItem from="1644234451226" duration="3825000" />
+      <workItem from="1644248840972" duration="857000" />
+      <workItem from="1644308204372" duration="938000" />
+      <workItem from="1644394506284" duration="3686000" />
     </task>
     <servers />
   </component>
